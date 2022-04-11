@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "build",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "es2017"
+  },
+  "include": ["src/"]
+}
