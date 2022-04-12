@@ -26,7 +26,7 @@
 		"cors": "^2.8.5",
 		"ethereumjs-util": "^7.0.5",
 		"express": "^4.16.4",
-		"express-jwt": "^6.1.1",
+		"express-jwt": "https://github.com/flyingleafe/express-jwt/archive/ea23660ea018d42c1aa6b27f3a07e58caf33c875.tar.gz",
 		"jose": "^4.6.0",
 		"pg": "^8.0.0",
 		"pg-hstore": "^2.0.0",
