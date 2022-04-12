@@ -702,7 +702,7 @@ evp_bytestokey@^1.0.3:
 "express-jwt@https://github.com/flyingleafe/express-jwt":
   version "6.1.1"
   resolved "https://github.com/flyingleafe/express-jwt#d068e63e9a41e5da79728572ebcb71d471eda073"
-  integrity sha1-vq75r789vrv8l2g43bcdcxn7hv6vdkq3
+  integrity sha1-l9bjs4m4sfvp3kxw6djjk9akn1pln55p
   dependencies:
     express-unless "^1.0.0"
     jose "^4.6.0"

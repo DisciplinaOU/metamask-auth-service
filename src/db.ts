@@ -2,7 +2,7 @@ import { INTEGER, Sequelize, STRING } from 'sequelize';
 
 import { User } from './models/index.js';
 
-const PSQL_CONN_STRING =  process.env.PSQL_CONN_STRING || 'postgresql:///disciplina_metamask_login?host=/run/postgresql'
+const PSQL_CONN_STRING = process.env.PSQL_CONN_STRING || 'postgresql:///disciplina_metamask_login?host=/run/postgresql'
 
 const sequelize = new Sequelize(PSQL_CONN_STRING);
 
