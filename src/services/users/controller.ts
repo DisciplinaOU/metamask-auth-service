@@ -17,15 +17,7 @@ export const find = (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const get = (req: Request, res: Response, next: NextFunction) => {
-	// AccessToken payload is in req.auth.data, especially its `id` field
-	// UserId is the param in /users/:userId
-	// We only allow user accessing herself, i.e. require payload.id==userId
-	if ((req as any).auth.data.id !== +req.params.userId) {
-		return res
-			.status(401)
-			.send({ error: 'You can can only access yourself' });
-	}
-	return User.findByPk(req.params.userId)
+	return User.findByPk((req as any).auth.data.id)
 		.then((user: User | null) => res.json(user))
 		.catch(next);
 };
@@ -36,13 +28,7 @@ export const create = (req: Request, res: Response, next: NextFunction) =>
 		.catch(next);
 
 export const patch = (req: Request, res: Response, next: NextFunction) => {
-	// Only allow to fetch current user
-	if ((req as any).auth.data.id !== +req.params.userId) {
-		return res
-			.status(401)
-			.send({ error: 'You can can only access yourself' });
-	}
-	return User.findByPk(req.params.userId)
+	return User.findByPk((req as any).auth.data.id)
 		.then((user: User | null) => {
 			if (!user) {
 				return user;

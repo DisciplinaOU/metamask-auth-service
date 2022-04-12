@@ -10,7 +10,7 @@ const app = express();
 
 // Middlewares
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({origin: true, credentials: true}));
 
 // Mount REST on /api
 app.use('/api', services);
