@@ -1,11 +1,11 @@
-import { recoverPersonalSignature } from '@metamask/eth-sig-util';
-import { bufferToHex } from 'ethereumjs-util';
+import { recoverPersonalSignature } from "@metamask/eth-sig-util";
+import { bufferToHex } from "ethereumjs-util";
 import { NextFunction, Request, Response } from 'express';
 import * as jose from 'jose';
 
 import { config } from '../../config.js';
 import { User } from '../../models/user.model.js';
-import { ed25519PrivateToPublic } from './utils.js';
+import { ed25519PrivateToPublic } from '../../utils.js';  
 
 export const create = (req: Request, res: Response, next: NextFunction) => {
 	const { signature, publicAddress } = req.body;
