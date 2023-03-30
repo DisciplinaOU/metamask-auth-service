@@ -1,7 +1,6 @@
 import { recoverPersonalSignature } from "@metamask/eth-sig-util";
-import { bufferToHex } from "ethereumjs-util";
+import { bufferToHex } from "@ethereumjs/util";
 import { NextFunction, Request, Response } from "express";
-import * as jose from "jose";
 
 import { config } from "../../config.js";
 import { User } from "../../models/user.model.js";
